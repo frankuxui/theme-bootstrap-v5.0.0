@@ -1,0 +1,30 @@
+
+
+<script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/{{ site.cdn.js }}/jquery.slim.min.js" crossorigin="anonymous"></script>
+
+<script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+<script src="{{ site.baseurl }}/docs/{{ site.docs_version }}/assets/js/docs.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript">
+
+  // Toc include class
+	$('.toc-nav li a').addClass('nav-link')
+
+  // Dinamic toc ( scrollspy )
+  $('.toc-h2 > .nav-link').addClass('nav-link-docs-header')
+	
+  $('body').scrollspy({ target: '#tocEntry' });
+  $(function () {
+	  $('[data-toggle="popover"]').popover()
+	})
+
+
+
+	
+</script>

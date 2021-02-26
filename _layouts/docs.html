@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+
+    {% include sidebar.html %}
+
+    
+    {% if page.layout == "simple" %}
+      {{ content }}
+    {% else %}
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+
+        {% if page.layout == 'addonz' %}
+          {% include sidebar_addonz.html %}
+        {% else %}
+          {% include sidebar.html %}
+        {% endif %}
+
+        {% if page.toc %}
+          <nav class="d-none d-xl-block col-xl-2 bd-toc" id="tocEntry">
+            {{ content | toc_only }}
+          </nav>
+        {% endif %}
+
+        <div class="col-md-9 col-xl-8 toc-entry-page main-example-docs">
+          <div class="row justify-content-center">
+            <div class="col-md-9 pt-5">
+              <main class="ap-examples bd-content mb-5" data-spy="scroll" data-target="#tocEntry" data-offset="0">
+                <h1 class="bd-title" id="content">{{ page.title | smartify }}</h1>
+                <p class="bd-lead">{{ page.description | smartify }}</p>
+                {{ content }}
+              </main>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    {% endif %}
+
+    {% include footer.html %}
+    {% include script.html %}
+
+  </body>
+</html>

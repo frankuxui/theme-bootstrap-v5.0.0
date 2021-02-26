@@ -1,0 +1,31 @@
+
+
+//
+// navbar
+//
+
+
+.navbar-docs-home{
+  background-color: #4e0465 !important;
+  @include box-shadow(1px 1px #3e0250 !important );
+  .navbar-brand{
+    color: white !important;
+  }
+  .navbar-nav .nav-link{
+    color: #bb8bca !important;
+    &:hover, &.active{
+      color: white !important;
+    }
+  }
+  .navbar-nav .active .nav-link{
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.12) !important;
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.12) !important;
+    }
+  }
+  .navbar-toggler{
+    background-color: #48045d !important;
+    color: white !important;
+  }
+}

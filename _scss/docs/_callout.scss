@@ -1,0 +1,27 @@
+
+//
+// Callout
+//
+
+
+.bd-callout{
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-left: .25rem solid transparent;
+  border-radius: .25rem;
+  background-color: rgb(251, 251, 251);
+  h4{
+    margin-top: 0;
+    margin-bottom: .25rem;
+    font-size: 1.50rem;
+  }
+  @each $colors, $value in $theme-colors {
+    &.bd-callout-#{$colors}{
+      border-left-color: $value;
+      h4{
+        color: $value;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+
+//
+// Highlight code
+//
+
+
+.highlight{
+  padding: 90px 30px 40px 30px;
+  background-color: rgb(248, 249, 250) ;
+  @include border-radius(1rem);
+  position: relative;
+  margin-bottom: 30px;
+  overflow: auto;
+  &::after{
+    content: "EXAMPLE";
+    text-transform: uppercase;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    font-size: 16px;
+    color: rgb(193, 193, 193);
+  }
+}
+
+.highlight > .highlight{
+  padding: 0;
+  margin: 0;
+  &::after{
+    content: "";
+  }
+}
+
+.code-highlight-figure{
+  .code-highlight-caption-title{
+    font-size: 16px;
+    color: rgb(181, 186, 191);
+    text-transform: uppercase;
+    display: block;
+    position: absolute;
+    top: 27px;
+    left: 30px;
+  }
+}
+
+.code-highlight-figure + .code-highlight-figure{
+  margin-top: -10px;
+}

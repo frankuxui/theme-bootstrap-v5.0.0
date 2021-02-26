@@ -1,0 +1,21 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    
+    {% include navbar.html %}
+
+    {% if page.layout == "simple" %}
+      {{ content }}
+    {% else %}
+    <div class="container-fluid">
+      {{ content }}
+    </div>
+    {% endif %}
+    {% include footer.html %}
+    {% include script.html %}
+  </body>
+</html>

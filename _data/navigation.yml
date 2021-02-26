@@ -1,0 +1,33 @@
+
+
+# Home
+- title: Home
+  pages:
+    - title: Home
+
+# Addonz
+- title: Addonz
+  pages:
+    - title: Addonz
+
+
+
+
+
+
+
+
+
+
+#navbar_link:
+#  - title: Home
+#    url: /
+#
+#  - title: Documentation
+#    url: /documentation/
+#
+#  - title: Examples
+#    url: /examples/
+#
+#  - title: Addonz
+#    url: addonz/

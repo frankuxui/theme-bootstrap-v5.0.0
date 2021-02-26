@@ -1,0 +1,29 @@
+<div class="col-md-3 col-xl-2 bd-sidebar sidebar-docs">
+  <div class="d-flex justify-content-end">
+    <button class="bd-toggle navbar-toggler d-md-none collapsed" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <nav class="bd-links collapse" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidebar-navs flex-column{% unless active == nil %} {{ active }}{% endunless %}">
+      {%- for item in site.data.nav -%}
+        <li class="nav-item">
+          <a class="nav-link nav-link-docs-header" data-bs-toggle="collapse" href="#collapse{{ item.title }}" aria-expanded="false" aria-controls="collapse{{ item.title }}">
+            {{ item.title }}
+            {%- include icons/chevron-bottom.svg class="bd-icons" height="26px" width="26px" -%}
+          </a>  
+          <div class="collapse" id="collapse{{ item.title }}">
+            <ul class="nav flex-column">
+            {%- for entry in item.pages -%}
+              <li class="nav-item">
+                <a class="nav-link" href="#">{{ entry.title  }}</a>
+              </li>
+            {%- endfor -%}
+            </ul>
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </nav>
+</div>

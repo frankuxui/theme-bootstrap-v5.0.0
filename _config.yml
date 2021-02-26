@@ -1,0 +1,129 @@
+
+# Server
+
+detach              : false
+port                : 4015
+host                : 127.0.0.1
+baseurl             : "" # does not include hostname
+url                 : ""
+show_dir_listing    : false
+source              : ""
+destination         : ./_site
+collections_dir     : .
+layouts_dir         : _layouts
+data_dir            : _data
+includes_dir        : _includes
+encoding            : UTF-8
+
+
+title:              Theme bootstrap
+description:        "Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins."
+
+# Custom variables version
+
+current_version:      2.0
+current_ruby_version: 2.4.10
+docs_version:         2.0
+
+# Styles
+
+sass:
+  sass_dir          : _scss    ## sets the location of the stylesheet
+  style             : expanded   ## nested, expanded, compact, compressed
+
+
+# Handling Reading
+
+safe                : false
+include             : [".htaccess"]
+exclude:
+  - .jekyll-cache/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  
+keep_files          : [".git", ".svn" ]
+markdown_ext        : "markdown,mkdown,mkdn,mkd,md"
+strict_front_matter : false
+
+# Filtering Content
+
+show_drafts         : null
+limit_posts         : 0
+future              : false
+unpublished         : false
+
+# Plugins
+
+plugins:
+  - jekyll-feed
+  - jekyll-coffeescript
+  - jekyll-sitemap
+  - jekyll-toc
+
+
+
+# styles and js
+
+cdn:
+  css               : assets/css
+  img               : assets/img
+  js                : assets/js 
+
+roboto_api: "https://fonts.googleapis.com/css?family=Roboto"
+
+# Conversion
+
+markdown            : kramdown
+highlighter         : rouge
+lsi                 : false
+excerpt_separator   : "\n\n"
+incremental         : false
+
+# Outputting
+
+permalink           : /:title/
+timezone            : null
+
+quiet               : false
+verbose             : false
+defaults            : []
+
+liquid:
+  error_mode        : warn
+  strict_filters    : false
+  strict_variables  : false
+
+# Markdown Processors
+
+rdiscount:
+  extensions        : []
+
+redcarpet:
+  extensions        : []
+
+kramdown:
+  auto_ids          : true
+  entity_output     : as_char
+  toc_levels        : [1, 2, 3, 4, 5, 6]
+  smart_quotes      : lsquo,rsquo,ldquo,rdquo
+  input             : GFM
+  hard_wrap         : false
+  footnote_nr       : 1
+  show_warnings     : false
+
+toc:
+  min_level:        2
+  max_level:        4
+  no_toc_section_class:
+    - "bd-callout"
+    - "bd-example"
+  list_class: nav section-nav toc-nav flex-column
+  sublist_class: toc-sublist
+  item_class: toc-entry nav-item
+  item_prefix: toc-
+
+profile:
+  name: Frank Esteban Isdray
+  email: fisdray@gmail.com
